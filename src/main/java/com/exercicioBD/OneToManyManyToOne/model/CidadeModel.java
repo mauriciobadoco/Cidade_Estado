@@ -3,6 +3,7 @@ package com.exercicioBD.OneToManyManyToOne.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -20,6 +21,7 @@ public class CidadeModel implements Serializable {
 
     @Column(length = 50)
     private String nomeCidade;
+
 
     @ManyToOne
     @JoinColumn(name = "nomeEstado",referencedColumnName = "idEstado")

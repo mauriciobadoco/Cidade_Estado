@@ -12,7 +12,6 @@ import java.util.Optional;
 public class CidadeService {
 
     @Autowired
-
     private ICidadeRepository repository;
 
     public List<CidadeModel> buscaCidade(){

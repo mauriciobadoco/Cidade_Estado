@@ -16,7 +16,7 @@ public class CidadeController {
     private CidadeService service;
 
     @GetMapping( path = "/cidades")
-    public List<CidadeModel> buscaCidades (){
+    public List<CidadeModel> buscaCidades(){
         return service.buscaCidade();
     }
 

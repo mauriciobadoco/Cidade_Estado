@@ -1,12 +1,13 @@
 package com.exercicioBD.OneToManyManyToOne.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -25,5 +26,5 @@ public class EstadoModel implements Serializable {
 
     @JsonIgnore
     @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL)
-    private List<CidadeModel> cidades;
+    private List<CidadeModel> cidades = new ArrayList<>();
 }
