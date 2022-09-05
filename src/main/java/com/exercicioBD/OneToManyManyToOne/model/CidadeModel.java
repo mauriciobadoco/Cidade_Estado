@@ -20,5 +20,9 @@ public class CidadeModel implements Serializable {
 
     @Column(length = 50)
     private String nomeCidade;
+
+    @ManyToOne
+    @JoinColumn(name = "nomeEstado",referencedColumnName = "idEstado")
+    private EstadoModel estado;
 }
 
